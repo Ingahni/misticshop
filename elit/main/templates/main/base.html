@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}{% endblock title %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        {% comment %} bootstrap {% endcomment %}
+        <link rel="stylesheet" href="{% static 'bootstrap\css\bootstrap.min.css' %}">
+        {% comment %} local css {% endcomment %}
+        <link rel="stylesheet" href="{% static 'css\base.css' %}">
+       
+    </head>
+    <body>
+        <header class="header sticky-top">
+            <div class="header-container d-flex">
+                <navbar class="header-nav pt-4">
+                    <ul  class="header-list d-flex">
+                        <li>
+                            <a href="/" class="nav-a m-3">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-a m-3">Shop</a>
+                        </li>
+                    </ul>
+                </navbar>
+                 <div class="header-logo">
+                    <a href="/"><img src="{% static 'img/logo.png' %}" all="" class="elit-logo"></a> 
+                </div>  
+                <div class="header-profile">
+                    <a href="#" class="cart-a mt-3">LOGIN</a>
+            </div>
+        </header>
+        <div class="container">
+            {% block content %}
+            {% endblock content %}
+        </div>
+       
+        {% comment %} js for bootstrap {% endcomment %}
+        <script src="{% static 'bootstrap\js\bootstrap.bundle.min.js' %}"></script>
+    </body>
+</html>
+
+{% comment %} main –> src src/assets/css, img  {% endcomment %}

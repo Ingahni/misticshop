@@ -1,0 +1,41 @@
+
+.idea/
+.vs
+.vscode
+
+# Байт-код, оптимизированные / DLL-файлы
+__pycache__/
+
+*.pyc
+*.pyo
+
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# инструменты и окружение
+venv/
+.env
+db.sqlite3
+local_settings.py
+
+# Файлы дистрибутивов и артефакты упаковки
+dist/
+*.egg-info/
+
+# Файлы покрытия, кэши и прочие ненужные файлы
+.coverage
+*.py,cover
+.cache/
+
+# Исключение пакетов и файлов
+parts/
+.installed.cfg
+
+# Учет операционно-системных файлов Windows 
+Thumbs.db
+
+# info
+info.txt
+comands.txt
+/media/
