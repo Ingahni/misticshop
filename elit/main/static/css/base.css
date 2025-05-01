@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap');
 
+/* Этот CSS-код отвечает за визуальное оформление и поведение элементов веб-страницы. Он применяется к HTML-структуре интернет-магазина и охватывает стили для текста, карточек товаров, заголовков, кнопок, меню и т. д. */
 :root {
     --box-shadow: 0 1px 1px rgba(0, 0, 0, 0.363);
 }
 
+/* Устанавливает основной шрифт, размер текста, убирает отступы, запрещает горизонтальный скролл. */
 body {
     
     font-family: 'Carrois Gothic', sans-serif;
@@ -13,22 +15,25 @@ body {
     overflow-x: hidden;
 }
 
+/* Убирает маркеры у списков. */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
+/* Делаeт ссылки розовыми и без подчёркивания. */
 a {
     text-decoration: none;
     color: palevioletred;
 }
 
+/* Определяют размеры и жирность заголовков. */
 h1{
-    font-family: 48px;
+    font-size: 48px;
 }
 
 h2 {
-    font-size: 48 px;
+    font-size: 48px;
     font-weight: 600;
 }
 
@@ -42,6 +47,9 @@ h5 {
     font-weight: 600;
 }
 
+/* Контейнеры и шапка */
+
+/* Контейнеры центрируют контент и задают макс. ширину. */
 .header-container {
     box-sizing: border-box;
     max-width: 1400px;
@@ -57,6 +65,7 @@ h5 {
     margin: 0 auto;
 }
 
+/* фиксированная высота, белый фон, тень. */
 .header {
     height: 80px;
     background-color: #fff;
@@ -82,6 +91,9 @@ h5 {
     margin-bottom: 50px;
 }
 
+/* Карточки товаров и логотипы */
+/* Отвечают за визуальный вид карточек товаров.
+При наведении — обводка становится более чёткой. */
 .home-cart {
     width: 200px;
     height: 200px;
@@ -106,6 +118,8 @@ h5 {
     height: 195px;
 }
 
+/* Цены и скидки */
+/* Показывают текущую цену, зачёркнутую старую цену и скидку. */
 .price {
     font-size: 20px;
     font-weight: 700;
@@ -157,8 +171,7 @@ h5 {
 }
 
 .detail-description {
-    margin-left: 40px;
-    margin-top: 40px;
+    margin-left: 40px;  
 }
 
 .detail-description p {
@@ -229,6 +242,9 @@ h5 {
     margin-bottom: 10px;
 }
 
+/* Основной контент и сетка товаров */
+/* Отвечает за расположение карточек товаров в сетке.
+Адаптивный дизайн — элементы автоматически заполняют пространство. */
 .items{
     display: grid;
     grid-template-columns: repeat(auto-fill, 225px);
@@ -241,6 +257,8 @@ h5 {
     margin: 0 auto;
 }
 
+/* Сайдбар (фильтры, меню) */
+/* Стилизует меню фильтров или категорий товаров */
 .sidebar {
     margin-top: 70px;
 }
@@ -264,12 +282,14 @@ h5 {
     margin-top: 20px;
 }
 
+/* подсвечивает выбранную категорию. */
 .selected {
     border: 1px solid #000;
     border-radius: 5px;
     background-color: rgba(233, 173, 94, 0.436);
 }
 
+/* Пагинация */
 .pagination {
     display: flex;
     position: absolute;
@@ -279,6 +299,7 @@ h5 {
     gap: 12px;
 }
 
+/* делает неактивные элементы полупрозрачными. */
 .disabled {
     opacity: 0.2;
 }
