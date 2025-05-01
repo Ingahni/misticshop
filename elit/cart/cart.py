@@ -55,5 +55,12 @@ class Cart:
         del self.session[settings.CART_SESSION_ID]
         self.save()
 
+# Просчитываем общую стоимость товаров в корзине с учетом скидки
     def get_total_price(self):
-        return sum(Decimal(item['price']) * item['quantity'] for item in self.cart.values())
+        total = sum((Decimal(item['price']) - (Decimal(item['price']) \
+            * Decimal(item['product'].discount / 100))) * item['quantity']
+                for item in self.cart.values())
+        return format(total, '.2f')
+    # 2f - округляем до 2 знаков после запятой
+    
+    

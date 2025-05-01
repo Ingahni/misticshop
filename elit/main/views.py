@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
 from .models import Category, Product
 
+# для отображения глвавной страницы
+
 
 def popular_list(request):
     # categories = Category.objects.all()

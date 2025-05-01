@@ -5,10 +5,12 @@ from django.urls import reverse
 class Category (models.Model):
     name = models.CharField(max_length=20, 
                             unique=True)
+    # для создания уникального URL
+    # для каждой категории
     slug = models.SlugField(max_length=20, 
                             unique=True)
 
-
+    # отображение в админке
     class Meta:
         ordering = ['name']
         indexes = [models.Index(fields=['name'])]
@@ -57,11 +59,12 @@ class Product(models.Model):
     def __str__(self):
         return self.name
     
+    # url для отображения продукта по id
     def get_absolute_url(self):
         return reverse('main:product_detail',
                       args=[self.slug])
     
-    
+    # система скидок
     def sell_price(self):
         if self.discount:
             return round(self.price - self.price * self.discount / 100, 2 )

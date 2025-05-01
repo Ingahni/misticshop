@@ -28,3 +28,7 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, 
                           document_root=settings.MEDIA_ROOT)
+    
+    
+    # приложение main отвечает за отображение главной страниц и каталога
+    # cart отвечает за отображение корзины и ее функционал
