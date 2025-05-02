@@ -24,6 +24,8 @@ def product_detail(request, slug):
     # ключ product может называться как угодно
     # в шаблоне мы обращаемся к объекту product
     
+
+# каталог товаров
 def product_list(request, category_slug=None):
     page = request.GET.get('page', 1)
     category = None

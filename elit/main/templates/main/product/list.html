@@ -42,6 +42,7 @@
                 {% endfor %}
             </div>
         </div>
+        {% comment %} пагинация страниц = отображение списком на одной странице{% endcomment %}
         <ul class="pagination">
             <li class="{% if not products.has_previous %}disabled{% endif %}">
                 <a href="{% if products.has_previous %}?page={{ products.previous_page_number }}{% endif %}">Previous</a>
@@ -61,3 +62,5 @@
     </div>
 </div>
 {% endblock content %}
+
+{% comment %} веостаем тут наш каталог {% endcomment %}
