@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 
-
+# пути для отображения корзины
 app_name = 'cart'
 
 urlpatterns = [

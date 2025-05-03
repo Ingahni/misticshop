@@ -40,12 +40,16 @@
                 {% endwith %}
             {%endfor%}
         </div>
-        <div class="total"
+        <div class="total">
             <h3>Total sum: $ {{ cart.get_total_price }}</h3>
         </div>
         <div class="cart-buttons d-flex gap-3">
             <a href="/shop" class="cart-btn">Continue Shopping</a>
-            <a href="#" class="cart-btn">Checkout</a>
+            {% with cart_quantity=cart|length %}
+                {% if cart_quantity == 0 %}
+                    <a href="#" class="cart-btn">Checkout</a>
+                {% endif %}
+            {% endwith %}
         </div>
     </section>
 {% endblock content%}

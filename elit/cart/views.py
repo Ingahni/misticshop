@@ -5,6 +5,8 @@ from main.models import Product
 from .cart import Cart
 from .forms import CartAddProductForm
 
+#представление для отображения товара в корзину 
+
 
 @require_POST
 def cart_add(request, product_id):

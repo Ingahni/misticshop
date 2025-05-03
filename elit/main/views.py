@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
 from .models import Category, Product
+from cart.forms import CartAddProductForm
 
 # для отображения глвавной страницы
 
@@ -16,9 +17,11 @@ def product_detail(request, slug):
     product = get_object_or_404(Product, 
                                 slug=slug,
                                 available=True)
+    cart_product_form = CartAddProductForm
     return render(request,
                   'main/product/detail.html',
-                  {'product': product})   
+                  {'product': product, 
+                   'cart_product_form': cart_product_form})   
     # словарь с данными для шаблона
     # в качестве значения передаем объект product 
     # ключ product может называться как угодно
