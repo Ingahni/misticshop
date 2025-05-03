@@ -22,35 +22,34 @@
                             <div class="cart-card-q">
                                 <p>Quantity: {{ item.quantity }}</p>
                             </div>
-                            <form action="{% url 'cart:cart_remove' product.id %}" method="POST">
-                                <input type="submit" value="Remove" class="remove-btn">
-                                {% csrf_token %} {% comment %}  не позволяет делать межсайтовые запросы {% endcomment %}
-                            </form>
-                            <div class="cart-card-price">
-                                {% if product.discount %}
-                                    <div class="cart-discount d-flex gap-2"> 
-                                        <p class="line">$ {{ product.price }}</p>
-                                        <p>$ {{ product.sell_price }}</p>
-                                    </div>
-                                {% else %}
-                                    <p class="price">$ {{ product.price }}</p>
-                                {% endif %}
-                            <div> 
                         </div>
+                        <form action="{% url 'cart:cart_remove' product.id %}" method="POST">
+                            <input type="submit" value="Remove" class="remove-btn">
+                            {% csrf_token %} {% comment %}  не позволяет делать межсайтовые запросы {% endcomment %}
+                        </form>
+                        <div class="cart-card-price">
+                            {% if product.discount %}
+                                <div class="cart-discount d-flex gap-2"> 
+                                    <p class="line">$ {{ product.price }}</p>
+                                    <p>$ {{ product.sell_price }}</p>
+                                </div>
+                            {% else %}
+                                <p class="price">$ {{ product.price }}</p>
+                            {% endif %}
+                        <div> 
+                    </div>
                 {% endwith %}
             {%endfor%}
         </div>
         <div class="total">
-            <h3>Total sum: $ {{ cart.get_total_price }}</h3>
+            <h5>Total sum: $ {{ cart.get_total_price }}</h5>
         </div>
         <div class="cart-buttons d-flex gap-3">
             {% comment %} иконка что будет вести в корзину {% endcomment %}
             <a href="/shop" class="cart-btn">Continue Shopping</a>
             {% with cart_quantity=cart|length %}
                 {% if cart_quantity > 0 %}  
-                    {{cart_quantity}}  
-                {% else %}
-                    0 {% comment %} 0 если товаоров нет {% endcomment %}
+                    <a href="#" class="cart-btn">Checkout</a>   {% comment %}оформление заказа  {% endcomment %}
                 {% endif %}
             {% endwith %}
         </div>

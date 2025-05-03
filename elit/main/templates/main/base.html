@@ -38,7 +38,7 @@
                     <a href="{% url 'cart:cart_detail' %}"><img src="{% static 'img/cart_online.png' %}" alt="" class="grob"></a>
                     <a href="#" class="m-2">LOGIN</a>
                     {% comment %} иконка что будет вести в корзину {% endcomment %}
-                    <p class="cart_quantity">
+                    <p class="cart-quantity">
                         {% with cart_quantity=cart|length %}
                             {% if cart_quantity > 0 %}
                                 {{ cart_quantity }}
@@ -47,7 +47,6 @@
                             {% endif %}
                         {% endwith %}
                     </p>
-                    {% comment %} <a href="#" class="cart-btn">Checkout</a> {% endcomment %}
                 </div>    
             </div>
         </header>
