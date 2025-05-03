@@ -17,7 +17,7 @@ def product_detail(request, slug):
     product = get_object_or_404(Product, 
                                 slug=slug,
                                 available=True)
-    cart_product_form = CartAddProductForm
+    cart_product_form = CartAddProductForm     # создаем кнопку добавления товара в корзину
     return render(request,
                   'main/product/detail.html',
                   {'product': product, 

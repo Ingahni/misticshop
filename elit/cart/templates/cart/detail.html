@@ -22,9 +22,9 @@
                             <div class="cart-card-q">
                                 <p>Quantity: {{ item.quantity }}</p>
                             </div>
-                            <form action="{% url 'cart:remove' product.id %}" method="POST">
+                            <form action="{% url 'cart:cart_remove' product.id %}" method="POST">
                                 <input type="submit" value="Remove" class="remove-btn">
-                                {% csrf_token %}
+                                {% csrf_token %} {% comment %}  не позволяет делать межсайтовые запросы {% endcomment %}
                             </form>
                             <div class="cart-card-price">
                                 {% if product.discount %}
@@ -44,10 +44,13 @@
             <h3>Total sum: $ {{ cart.get_total_price }}</h3>
         </div>
         <div class="cart-buttons d-flex gap-3">
+            {% comment %} иконка что будет вести в корзину {% endcomment %}
             <a href="/shop" class="cart-btn">Continue Shopping</a>
             {% with cart_quantity=cart|length %}
-                {% if cart_quantity == 0 %}
-                    <a href="#" class="cart-btn">Checkout</a>
+                {% if cart_quantity > 0 %}  
+                    {{cart_quantity}}  
+                {% else %}
+                    0 {% comment %} 0 если товаоров нет {% endcomment %}
                 {% endif %}
             {% endwith %}
         </div>
