@@ -5,18 +5,21 @@
 
 {% block content %}
     <section class="home d-flex flex-column">
-        <div class="home-title d-flex flex-column elign-items-center">
+        <div class="home-title d-flex flex-column align-items-center">
             <a href="#" class="home-btn mt-4">ALL PRODUCTS</a>
         </div>
         <div class="home-recomendation">
-            <div class="rec-title nb-4">
-                <h3><span>Popular Accessoaries</span></h3>
+            <div class="rec-title mb-4">
+                <h3><span>Popular Accessories</span></h3>
             </div>
         </div>
         <div class="home-cards d-flex gap-4">
+            {% comment %}Відображення карток товарів. Ітерує по всіх products, кожен виводиться як картка з посиланням. {% endcomment %}
             {% for product in products %}
                 <a href="{{ product.get_absolute_url }}" class="home-card d-flex flex-column align-items-center">
                     <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/noimage.jpg' %}{% endif %}" class="card-img" alt="">
+                    {% comment %} Назва та ціна. Якщо є знижка — стара ціна зачеркнута, поруч нова.
+Інакше просто виводиться ціна. {% endcomment %}
                     <h5 class="title-card">{{ product.name }}</h5>
                     {% if product.discount %}
                         <div class="cart-discount d-flex gap-2"> 
@@ -29,7 +32,7 @@
                 </a>
             {% endfor %}
         </div>
-        <div class="bot-title d-flex flex-column elign-items-center">
+        <div class="bot-title d-flex flex-column align-items-center">
             <a href="#" class="bot-btn mt-4">botshop</a>
         </div>
     </section>
@@ -38,3 +41,5 @@
 {% endblock content %}
 
 {% comment %} главная страница,  {% endcomment %}
+
+{% comment %} Цей шаблон home.html — це головна сторінка інтернет-магазину, написана з використанням Django Template Language. Він відповідає за відображення кнопки переходу до всіх товарів, секції з популярними товарами та нижньої кнопки (бот-магазин). {% endcomment %}

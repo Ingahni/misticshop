@@ -145,6 +145,12 @@ h5 {
     background-color: rgba(252, 190, 109, 0.42);
 }
 
+.frame2 {
+    position: absolute;
+    left: -0.5%;
+    bottom: 60%;
+    z-index: -1;
+}
 .logogothic {
     position: absolute ;
     top: 6%;

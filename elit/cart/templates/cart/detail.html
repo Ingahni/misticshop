@@ -5,10 +5,10 @@
 
 {% block content %}
     <section class="cart d-flex">
-        <div class="cart=title">
+        <div class="cart-title">
             <h2>Shopping Cart</h2>
         </div>
-        <div class="cart=cards">
+        <div class="cart-cards">
             {% for item in cart %}
                 {% with product=item.product %}
                     <div class="cart-card d-flex">
@@ -25,7 +25,8 @@
                         </div>
                         <form action="{% url 'cart:cart_remove' product.id %}" method="POST">
                             <input type="submit" value="Remove" class="remove-btn">
-                            {% csrf_token %} {% comment %}  не позволяет делать межсайтовые запросы {% endcomment %}
+                            {% csrf_token %} 
+                            {% comment %}  не позволяет делать межсайтовые запросы {% endcomment %}
                         </form>
                         <div class="cart-card-price">
                             {% if product.discount %}
@@ -36,7 +37,7 @@
                             {% else %}
                                 <p class="price">$ {{ product.price }}</p>
                             {% endif %}
-                        <div> 
+                        </div> 
                     </div>
                 {% endwith %}
             {%endfor%}
