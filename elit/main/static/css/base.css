@@ -145,12 +145,13 @@ h5 {
     background-color: rgba(252, 190, 109, 0.42);
 }
 
-.frame2 {
+/* .frame2 {
     position: absolute;
     left: -0.5%;
     bottom: 60%;
     z-index: -1;
-}
+} */
+
 .logogothic {
     position: absolute ;
     top: 6%;
@@ -339,10 +340,10 @@ h5 {
 
 .cart-card{
     display: flex;
-    gap: 15px;
+    gap: 10px;
     justify-content: center;
     align-items: center;
-    width: 570px;
+    width: 572px;
     height: 150px;
     border: 1px solid #00000042;
     border-radius: 10px;
@@ -360,10 +361,29 @@ h5 {
     width: 125px;
     height: 125px;
     border: 1px solid #00000042;
+    border-radius: 5px;
 }
 
 .cart-card-name {
-    width: 180px;
+    width: 150px;
+}
+
+.remove-btn {
+    background-color: #fff;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #00000042;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.5s ease;
+}
+
+.remove-btn:hover {
+    border: 1px solid #000;
 }
 
 .cart-btn {
@@ -383,3 +403,46 @@ h5 {
     border: 1px solid #000;
 }
 
+.cart-price {
+    font-size: 16px;
+}
+
+.opac {
+    opacity: 0.5;
+    margin: 0;
+}
+
+.cart-total-price-ots {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.cart-total-price {
+    margin: 0;
+}
+
+.total {
+    margin: 50px 0 25px 0;
+}
+
+.cart-form {
+    margin-top: 25px;
+}
+
+.add-to-cart-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 50px;
+    border: 1px solid #00000042;
+    border-radius: 5px;
+    margin: 0;
+    background-color: #fff;
+    transition: all 0.5s ease;
+    margin-top: 25px;
+}
+
+.add-to-cart-btn:hover {
+    border: 1px solid #000;
+}
