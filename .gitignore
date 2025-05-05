@@ -1,5 +1,5 @@
 
-.idea/
+.idea
 .vs
 .vscode
 
@@ -36,6 +36,5 @@ parts/
 Thumbs.db
 
 # info
-info.txt
-comands.txt
-/media/
+media/
+.pylintrc
