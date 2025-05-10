@@ -7,8 +7,9 @@ from cart.forms import CartAddProductForm
 
 
 def popular_list(request):
-    # categories = Category.objects.all()
-    products = Product.objects.filter(available=True)[:3]
+    categories = Category.objects.all()
+    products = Product.objects.filter(available=True)[:4]
+    # Неочевидно, чому саме ці 3 продукти — популярність не визначена
     return render(request, 
                   'main/index/index.html',
                   {'products': products})
@@ -37,14 +38,12 @@ def product_list(request, category_slug=None):
     paginator = Paginator(products, 1)
     current_page = paginator.page(int(page))
     
-    
     if category_slug:
         category = get_object_or_404(Category, 
                                      slug=category_slug)
+        products = products.filter(category=category)
         paginator = Paginator(products.filter(category=category), 1)
-        current_page = paginator.page(int(page))
-        # products = products.filter(category=category)
-        
+        current_page = paginator.page(int(page))     
     return render(request,
                   'main/product/list.html',
                   {'category': category,

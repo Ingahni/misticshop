@@ -13,5 +13,6 @@ urlpatterns = [
     path('shop/<slug:slug>/', views.product_detail,
          name='product_detail'), 
     
-    path('shop/category/<slug:category_slug>/', views.product_list, name='product_list_by_category'),
+    path('shop/category/<slug:category_slug>/', views.product_list, 
+         name='product_list_by_category'),
 ]
