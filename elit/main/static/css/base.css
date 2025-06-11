@@ -5,6 +5,15 @@
     --box-shadow: 0 1px 1px rgba(0, 0, 0, 0.363);
 }
 
+@font-face {
+    font-family: "dark";
+    src: url(D:../font/Dark-Wizards.ttf);
+}
+
+span {
+    font-family: "dark";
+
+}
 /* Устанавливает основной шрифт, размер текста, убирает отступы, запрещает горизонтальный скролл. */
 body {
     
