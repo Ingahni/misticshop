@@ -7,11 +7,13 @@
 
 @font-face {
     font-family: "dark";
-    src: url(D:../font/Dark-Wizards.ttf);
+    src: url(D:elit\main\static\font\Dark-Wizards.ttf;)
 }
 
 span {
-    font-family: "dark";
+    font-family: "dark", "Dark Wizards", sans-serif;
+    font-size: 40px;
+    line-height: 0;
 
 }
 /* Устанавливает основной шрифт, размер текста, убирает отступы, запрещает горизонтальный скролл. */
@@ -33,7 +35,7 @@ ul {
 /* Делаeт ссылки розовыми и без подчёркивания. */
 a {
     text-decoration: none;
-    color: palevioletred;
+    color: rgb(243, 122, 148); /*цвет текста при фоне*/
 }
 
 /* Определяют размеры и жирность заголовков. */
@@ -74,10 +76,10 @@ h5 {
     margin: 0 auto;
 }
 
-/* фиксированная высота, белый фон, тень. */
+/* фиксированная высота, фон, тень. */
 .header {
     height: 80px;
-    background-color: #fff;
+    background-color: #f2c1a2;
     box-shadow: var(--box-shadow); ;
 }
 
@@ -143,7 +145,7 @@ h5 {
     height: 50px;
     border: 1px solid #00000027;
     border-radius: 5px;
-    background-color: rgba(233, 173, 94, 0.436);
+    background-color: #f7dcc7;
     /* background-image: url ('/static/img/btn.png'); */
     transition: all 0.4s ease;
     z-index: 2;
@@ -151,7 +153,7 @@ h5 {
 
 .home-btn:hover {
     border: 1px solid #000;
-    background-color: rgba(252, 190, 109, 0.42);
+    background-color: #fcf4e8;
 }
 
 /* .frame2 {
@@ -236,7 +238,7 @@ h5 {
     height: 50px;
     border: 1px solid #00000027;
     border-radius: 5px;
-    background-color: rgb(98, 238, 98);
+    background-color: #f7dcc7;    ;
     /* background-image: url('elit\main\static\img\logobot.png'); */
     
     transition: all 0.4s ease;
@@ -302,7 +304,7 @@ h5 {
 .selected {
     border: 1px solid #000;
     border-radius: 5px;
-    background-color: rgba(233, 173, 94, 0.436);
+    background-color: #f7dcc7;    ;
 }
 
 /* Пагинация */
@@ -389,6 +391,7 @@ h5 {
     border-radius: 5px;
     font-size: 16px;
     transition: all 0.5s ease;
+    background-color: #f7dcc7;
 }
 
 .remove-btn:hover {
@@ -406,6 +409,7 @@ h5 {
     border-radius: 5px;
     font-size: 16px;
     transition: all 0.5s ease;
+    background-color: #f7dcc7;
 }
 
 .cart-btn:hover {
@@ -450,6 +454,7 @@ h5 {
     background-color: #fff;
     transition: all 0.5s ease;
     margin-top: 25px;
+    background-color: #f7dcc7;
 }
 
 .add-to-cart-btn:hover {
