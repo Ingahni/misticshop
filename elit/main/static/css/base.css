@@ -6,15 +6,14 @@
 }
 
 @font-face {
-    font-family: "dark";
-    src: url(D:elit\main\static\font\Dark-Wizards.ttf;)
+    font-family: "BrushOff";
+    src: url(../font/BrushOff.ttf) format('truetype');
 }
 
 span {
-    font-family: "dark", "Dark Wizards", sans-serif;
-    font-size: 40px;
+    font-family: "BrushOff", serif;
+    font-size: 80px;
     line-height: 0;
-
 }
 /* Устанавливает основной шрифт, размер текста, убирает отступы, запрещает горизонтальный скролл. */
 body {
