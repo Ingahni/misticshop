@@ -101,6 +101,38 @@ h5 {
     margin-bottom: 50px;
 }
 
+.home-search {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1300px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.form-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute; */
+    
+    width: 780px;
+    height: 60px;
+    border: 1px solid #00000042;
+    border-radius: 25px;
+    background-color: #f7dcc7;
+    transition: all 0.6s ease;
+}
+
+.placeholder {
+    color: #00000042;
+    font-size: 20px;
+}
+
 /* Карточки товаров и логотипы */
 /* Отвечают за визуальный вид карточек товаров.
 При наведении — обводка становится более чёткой. */
@@ -459,3 +491,4 @@ h5 {
 .add-to-cart-btn:hover {
     border: 1px solid #000;
 }
+
