@@ -88,30 +88,51 @@ h5 {
 
 .elit-logo {
     position: fixed;
-    top: 0.5%;
-    left: 44.5%;
+    bottom: 89.5%;
+    left: 45.5%;
 }
 
 .home {
     align-items: center;
+    margin-top: 250px;
 }
 
-.home-title {
+.home-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #007bff;
+    /* Bootstrap primary */
+    /* text-decoration: none; */
+    transition: 0.3s ease;
+}
+
+.home-btn:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+} 
+
+/* .home-title {
     margin-top: 210px;
     margin-bottom: 50px;
-}
+} */
 
 .home-search {
     display: flex;
     position: absolute;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    max-width: 1300px;
+    /* width: 100%; */
+    /* max-width: 1300px; */
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 .form-control {
@@ -119,7 +140,6 @@ h5 {
     align-items: center;
     justify-content: center;
     /* position: absolute; */
-    
     width: 780px;
     height: 60px;
     border: 1px solid #00000042;
