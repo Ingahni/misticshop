@@ -36,6 +36,6 @@ parts/
 Thumbs.db
 
 # info
-media\
+
 .pylintrc
-media/products/
+media/
