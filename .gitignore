@@ -36,5 +36,5 @@ parts/
 Thumbs.db
 
 # info
-media/
+media\
 .pylintrc
