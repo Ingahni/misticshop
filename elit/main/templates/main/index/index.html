@@ -4,12 +4,14 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-    <section class="search d-flex justify-content-center align-items-center">
+    <section class="search d-flex justify-content-center align-items-center" gap-4  p-5 bg-white shadow rounded">
+            <!-- Кнопка-круг -->
         <div class="home-title">
-            <a href="#" class="home-btn mt-4">ALL PRODUCTS</a>
+            <a href="#" class="home-btn-circle">ALL PRODUCTS</a>
         </div>
-        <div class="home-search me-3">
-            <form><input type="search" class="form-control" placeholder="Search for products">
+            <!-- Пошук -->
+        <div class="home-search">
+            <form class="d-flex><input type="search" class="form-control" placeholder="Search for products">
             </form>
         </div> 
     </section>

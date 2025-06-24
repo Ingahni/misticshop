@@ -3,6 +3,7 @@
 /* Этот CSS-код отвечает за визуальное оформление и поведение элементов веб-страницы. Он применяется к HTML-структуре интернет-магазина и охватывает стили для текста, карточек товаров, заголовков, кнопок, меню и т. д. */
 :root {
     --box-shadow: 0 1px 1px rgba(0, 0, 0, 0.363);
+    --background-color: #f7dcc7;
 }
 
 @font-face {
@@ -94,34 +95,35 @@ h5 {
 
 .home {
     align-items: center;
-    margin-top: 250px;
+    margin-top: 100px;
 }
 
-.home-btn {
-    width: 80px;
-    height: 80px;
+.home-btn-circle {
+    /* margin-top: 75%; */
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     text-align: center;
-    background-color: #007bff;
+    background-color: var(--background-color);
     /* Bootstrap primary */
     /* text-decoration: none; */
     transition: 0.3s ease;
 }
 
-.home-btn:hover {
+.home-btn-circle:hover {
     background-color: #0056b3;
     text-decoration: none;
 } 
 
-/* .home-title {
-    margin-top: 210px;
+.home-title {
+    margin-top: 5%;
     margin-bottom: 50px;
-} */
+}
 
 .home-search {
     display: flex;
@@ -272,6 +274,7 @@ h5 {
     height: 50px;
     border: 1px solid #000;
     border-radius: 5px;
+    background-color: var(--background-color);
     transition: all 0.4s ease;
     z-index: 2;
     margin: 20px;
