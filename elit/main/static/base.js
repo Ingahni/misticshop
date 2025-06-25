@@ -1,12 +1,11 @@
-const btn = document.getElementById('expandBtn');
+const link = document.getElementById('expandLink');
 
-  btn.addEventListener('click', (e) => {
-    e.preventDefault(); // зупиняємо стандартну поведінку на випадок форми
-    btn.classList.add('expanded');
-    btn.innerText = 'ALL PRODUCTS';
+link.addEventListener('click', function (e) {
+  e.preventDefault(); // зупиняємо миттєвий перехід
+  link.classList.add('expanded');
+  link.innerText = 'ALL PRODUCTS';
 
-    // Затримка перед переходом — щоб показати анімацію
-    setTimeout(() => {
-      window.location.href = '/catalog.html'; // змініть на ваш шлях
-    }, 500); // 0.5 секунди
-  });
+  setTimeout(() => {
+    window.location.href = link.getAttribute('href');
+  }, 500); // 0.5 секунди для анімації
+});
