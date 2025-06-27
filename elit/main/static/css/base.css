@@ -1,230 +1,232 @@
-@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap');
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap");
+/* @use 'mixins' as *; */
+/* // без mixins
 
+*/
 /* Этот CSS-код отвечает за визуальное оформление и поведение элементов веб-страницы. Он применяется к HTML-структуре интернет-магазина и охватывает стили для текста, карточек товаров, заголовков, кнопок, меню и т. д. */
 :root {
-    --box-shadow: 0 1px 1px rgba(0, 0, 0, 0.363);
-    --background-color: #f7dcc7;
+  --box-shadow: 0 1px 1px rgba(0, 0, 0, 0.363);
+  --background-color: #f7dcc7;
 }
+
 :root {
-    --link-hover-color: #fcf4e8;
-    --border: 1px solid #000;
+  --link-hover-color: #fcf4e8;
+  --border: 1px solid #000;
 }
 
 @font-face {
-    font-family: "BrushOff";
-    src: url(../font/BrushOff.ttf) format('truetype');
+  font-family: "BrushOff";
+  src: url(../font/BrushOff.ttf) format("truetype");
+}
+span {
+  font-family: "BrushOff", serif;
+  font-size: 80px;
+  line-height: 0;
 }
 
-span {
-    font-family: "BrushOff", serif;
-    font-size: 80px;
-    line-height: 0;
-}
 /* Устанавливает основной шрифт, размер текста, убирает отступы, запрещает горизонтальный скролл. */
 body {
-    
-    font-family: 'Carrois Gothic', sans-serif;
-    font-size: 18px;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+  font-family: "Carrois Gothic", sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 /* Убирает маркеры у списков. */
 ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 /* Делаeт ссылки розовыми и без подчёркивания. */
 a {
-    text-decoration: none;
-    color: rgb(243, 122, 148); /*цвет текста при фоне*/
+  text-decoration: none;
+  color: rgb(243, 122, 148); /*цвет текста при фоне*/
 }
 
 /* Определяют размеры и жирность заголовков. */
-h1{
-    font-size: 48px;
+h1 {
+  font-size: 48px;
 }
 
 h2 {
-    font-size: 48px;
-    font-weight: 600;
+  font-size: 48px;
+  font-weight: 600;
 }
 
 h3 {
-    font-size: 36px;
+  font-size: 36px;
 }
 
 h5 {
-    font-size: 18px;
-    margin: 0;
-    font-weight: 600;
+  font-size: 18px;
+  margin: 0;
+  font-weight: 600;
 }
 
 /* Контейнеры и шапка */
-
 /* Контейнеры центрируют контент и задают макс. ширину. */
 .header-container {
-    box-sizing: border-box;
-    max-width: 1400px;
-    margin: 0 auto;
-    justify-content: space-between;
-    padding: 0 15px;
-    align-items: center;
+  box-sizing: border-box;
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 0 15px;
+  align-items: center;
 }
 
 .container {
-    box-sizing: border-box;
-    max-width: 1600px;
-    margin: 0 auto;
+  box-sizing: border-box;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 /* фиксированная высота, фон, тень. */
 .header {
-    height: 80px;
-    background-color: #f2c1a2;
-    box-shadow: var(--box-shadow); ;
+  height: 80px;
+  background-color: #f2c1a2;
+  box-shadow: var(--box-shadow);
 }
 
 .header-list {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .elit-logo {
-    position: fixed;
-    bottom: 89.5%;
-    left: 45.5%;
+  position: fixed;
+  bottom: 89.5%;
+  left: 45.5%;
 }
 
 .home-title {
-    margin-top: 5%;
-    margin-bottom: 50px;
+  margin-top: 5%;
+  margin-bottom: 50px;
 }
 
 .home-link-circle {
-    /* margin-top: 75%; */
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: inline;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    text-align: center;
-    background-color: var(--background-color);
-    /* Bootstrap primary */
-    /* text-decoration: none; */
-    transition: all 0.4s ease;
-    white-space: nowrap;
-    overflow: hidden;
-    padding: 0;
+  /* margin-top: 75%; */
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-align: center;
+  background-color: var(--background-color);
+  /* Bootstrap primary */
+  /* text-decoration: none; */
+  transition: all 0.4s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0;
 }
 
 .home-link-circle:hover {
-    background-color: #0056b3;
-    text-decoration: none;
+  background-color: #0056b3;
+  text-decoration: none;
 }
 
 .home-link-expandable.expanded {
-    width: 180px;
-    border-radius: 40px;
-    padding: 0 20px;
+  width: 180px;
+  border-radius: 40px;
+  padding: 0 20px;
 }
 
 .home-search {
-    display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    /* max-width: 1300px; */
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* max-width: 1300px; */
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.home-search input[type="search"] {
-    max-width: 250px;
-    transition: all 0.3s ease;
+.home-search input[type=search] {
+  max-width: 250px;
+  transition: all 0.3s ease;
 }
 
 .form-control {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 780px;
-    height: 60px;
-    border: 1px solid #00000042;
-    border-radius: 25px;
-    background-color: #f7dcc7;
-    transition: all 0.6s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 780px;
+  height: 60px;
+  border: 1px solid rgba(0, 0, 0, 0.2588235294);
+  border-radius: 25px;
+  background-color: #f7dcc7;
+  transition: all 0.6s ease;
 }
 
 /* .placeholder {
     color: #00000042;
     font-size: 20px;
 } */
-
 .home {
-    align-items: center;
-    margin-top: 100px;
+  align-items: center;
+  margin-top: 100px;
 }
 
 /* Карточки товаров и логотипы */
 /* Отвечают за визуальный вид карточек товаров.
 При наведении — обводка становится более чёткой. */
 .home-cad {
-    width: 200px;
-    height: 200px;
-    border: 1px solid #00000027;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    background-color: #fff; 
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.1529411765);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background-color: #fff;
 }
 
 .home-card:hover {
-   border: 1px solid #000;
+  border: 1px solid #000;
 }
 
 .title-card {
-   max-width: 185px;
-   margin-top: 20px;
-   min-height: 70px;
+  max-width: 185px;
+  margin-top: 20px;
+  min-height: 70px;
 }
 
 .card-img {
-    width: 195px;
-    height: 195px;
+  width: 195px;
+  height: 195px;
 }
 
 /* Цены и скидки */
 /* Показывают текущую цену, зачёркнутую старую цену и скидку. */
 .price {
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: -10px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: -10px;
 }
 
 .home-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 180px;
-    height: 50px;
-    border: 1px solid #00000027;
-    border-radius: 5px;
-    background-color: #f7dcc7;
-    /* background-image: url ('/static/img/btn.png'); */
-    transition: all 0.4s ease;
-    z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.1529411765);
+  border-radius: 5px;
+  background-color: #f7dcc7;
+  /* background-image: url ('/static/img/btn.png'); */
+  transition: all 0.4s ease;
+  z-index: 2;
 }
 
 .home-btn:hover {
-    border: 1px solid #000;
-    background-color: #fcf4e8;
+  border: 1px solid #000;
+  background-color: #fcf4e8;
 }
 
 /* .frame2 {
@@ -233,303 +235,301 @@ h5 {
     bottom: 60%;
     z-index: -1;
 } */
-
 .logogothic {
-    position: absolute ;
-    top: 6%;
-    left: 40%;
-    width: 400px;
-    height: 300px;
+  position: absolute;
+  top: 6%;
+  left: 40%;
+  width: 400px;
+  height: 300px;
 }
 
 .subtitlee {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    /* bottom: 0; */
-    left: 44.50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  /* bottom: 0; */
+  left: 44.5%;
 }
 
 /* .detail-image {
     width: 100%;
     height: 100%;
 } */
-
 .detail-product {
   margin-top: 80px;
 }
 
 .detail-description {
-    margin-left: 40px;  
+  margin-left: 40px;
 }
 
 .detail-description p {
-     margin-top: 30px;
-     max-width: 700px;
+  margin-top: 30px;
+  max-width: 700px;
 }
 
 .detail-description h2 span {
-    font-size: 56px;
+  font-size: 56px;
 }
 
 .cart-discount {
-    margin-top: -10px;
-    font-weight: 600;
+  margin-top: -10px;
+  font-weight: 600;
 }
 
 .cart-discount .price {
-    margin-top: -1px;
+  margin-top: -1px;
 }
 
 .line {
-    opacity: 0.7;
-    text-decoration: line-through;
-    font-weight: 300;
+  opacity: 0.7;
+  text-decoration: line-through;
+  font-weight: 300;
 }
 
 .cart-btn {
-    width: 180px;
-    height: 50px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    background-color: var(--background-color);
-    transition: all 0.4s ease;
-    z-index: 2;
-    margin: 20px;
+  width: 180px;
+  height: 50px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: var(--background-color);
+  transition: all 0.4s ease;
+  z-index: 2;
+  margin: 20px;
 }
 
 .cart-btn:hover {
-    border: 1px solid #000;
+  border: 1px solid #000;
 }
 
 .bot-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 180px;
-    height: 50px;
-    border: 1px solid #00000027;
-    border-radius: 5px;
-    background-color: #f7dcc7;    ;
-    /* background-image: url('elit\main\static\img\logobot.png'); */
-    
-    transition: all 0.4s ease;
-    /* z-index: 2; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.1529411765);
+  border-radius: 5px;
+  background-color: #f7dcc7;
+  /* background-image: url('elit\main\static\img\logobot.png'); */
+  transition: all 0.4s ease;
+  /* z-index: 2; */
 }
 
 .bot-btn:hover {
-    border: 1px solid #000;
-    background-color: rgba(98, 238, 98, 0.527);
+  border: 1px solid #000;
+  background-color: rgba(98, 238, 98, 0.527);
 }
 
 .main {
-    margin-left: 150px;
+  margin-left: 150px;
 }
 
 .main-title {
-    font-size: 36px;
-    margin-top: 65px;
-    margin-bottom: 10px;
+  font-size: 36px;
+  margin-top: 65px;
+  margin-bottom: 10px;
 }
 
 /* Основной контент и сетка товаров */
 /* Отвечает за расположение карточек товаров в сетке.
 Адаптивный дизайн — элементы автоматически заполняют пространство. */
-.items{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 225px);
-    width: 100%;
-    max-width: 1300px;
-    justify-content: center;
-    justify-items: center;
-    column-gap: 0px;
-    row-gap: 10px;
-    margin: 0 auto;
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 225px);
+  width: 100%;
+  max-width: 1300px;
+  justify-content: center;
+  justify-items: center;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  row-gap: 10px;
+  margin: 0 auto;
 }
 
 /* Сайдбар (фильтры, меню) */
 /* Стилизует меню фильтров или категорий товаров */
 .sidebar {
-    margin-top: 70px;
+  margin-top: 70px;
 }
+
 .llist {
-   margin-left: -80px;
+  margin-left: -80px;
 }
 
 .sidebar ul li {
-    font-size: 20px;
-    width: 165px;
-    height: 35px;
-    margin-bottom: 5px;
+  font-size: 20px;
+  width: 165px;
+  height: 35px;
+  margin-bottom: 5px;
 }
 
 .sidebar ul li a {
-    margin-left: 15px;
-    width: 165px;
+  margin-left: 15px;
+  width: 165px;
 }
 
 .sidebar ul {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 /* подсвечивает выбранную категорию. */
 .selected {
-    border: 1px solid #000;
-    border-radius: 5px;
-    background-color: #f7dcc7;    ;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #f7dcc7;
 }
 
 /* Пагинация */
 .pagination {
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    bottom: 0%;
-    left: 46%;
-    gap: 12px;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  bottom: 0%;
+  left: 46%;
+  gap: 12px;
 }
 
 /* делает неактивные элементы полупрозрачными. */
 .disabled {
-    opacity: 0.2;
+  opacity: 0.2;
 }
 
 .grob {
-    width: 35px;
-    height: 35px;
-    margin-right: 10px;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
 }
 
 .cart-quantity {
-    position: absolute;
-    border-radius: 20px;
-    width: 20px;
-    height: 20px;
-    font-size: 13px;
-    border: 1px solid #00000042;
-    text-align: center;
-    margin-left: 30px;
-    margin-top: -45px;
+  position: absolute;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  font-size: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.2588235294);
+  text-align: center;
+  margin-left: 30px;
+  margin-top: -45px;
 }
 
 .cart {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .cart-title {
-    margin-top: 60px;
-    margin-bottom: 30px;
+  margin-top: 60px;
+  margin-bottom: 30px;
 }
 
-.cart-card{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    width: 572px;
-    height: 150px;
-    border: 1px solid #00000042;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    background-image: url(/static/img/cfr2.png);
-    background-repeat: no-repeat;
+.cart-card {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 572px;
+  height: 150px;
+  border: 1px solid rgba(0, 0, 0, 0.2588235294);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-image: url(/static/img/cfr2.png);
+  background-repeat: no-repeat;
 }
 
 .cart-card:nth-child(even) {
-    background-image: url(/static/img/cfr1.png);
-    background-repeat: no-repeat;
+  background-image: url(/static/img/cfr1.png);
+  background-repeat: no-repeat;
 }
 
 .cart-card-img img {
-    width: 125px;
-    height: 125px;
-    border: 1px solid #00000042;
-    border-radius: 5px;
+  width: 125px;
+  height: 125px;
+  border: 1px solid rgba(0, 0, 0, 0.2588235294);
+  border-radius: 5px;
 }
 
 .cart-card-name {
-    width: 150px;
+  width: 150px;
 }
 
 .remove-btn {
-    background-color: #fff;
-    box-shadow: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 30px;
-    border: 1px solid #00000042;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: all 0.5s ease;
-    background-color: #f7dcc7;
+  background-color: #fff;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.2588235294);
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.5s ease;
+  background-color: #f7dcc7;
 }
 
 .remove-btn:hover {
-    border: 1px solid #000;
+  border: 1px solid #000;
 }
 
 .cart-btn {
-    box-shadow: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 180px;
-    height: 50px;
-    border: 1px solid #00000042;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: all 0.5s ease;
-    background-color: #f7dcc7;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.2588235294);
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.5s ease;
+  background-color: #f7dcc7;
 }
 
 .cart-btn:hover {
-    border: 1px solid #000;
+  border: 1px solid #000;
 }
 
 .cart-price {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .opac {
-    opacity: 0.5;
-    margin: 0;
+  opacity: 0.5;
+  margin: 0;
 }
 
 .cart-total-price-ots {
-    font-size: 18px;
-    margin-bottom: 25px;
+  font-size: 18px;
+  margin-bottom: 25px;
 }
 
 .cart-total-price {
-    margin: 0;
+  margin: 0;
 }
 
 .total {
-    margin: 50px 0 25px 0;
+  margin: 50px 0 25px 0;
 }
 
 .cart-form {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .add-to-cart-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 180px;
-    height: 50px;
-    border: 1px solid #00000042;
-    border-radius: 5px;
-    margin: 0;
-    background-color: #fff;
-    transition: all 0.5s ease;
-    margin-top: 25px;
-    background-color: #f7dcc7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.2588235294);
+  border-radius: 5px;
+  margin: 0;
+  background-color: #fff;
+  transition: all 0.5s ease;
+  margin-top: 25px;
+  background-color: #f7dcc7;
 }
 
 .add-to-cart-btn:hover {
-    border: 1px solid #000;
-}
-
+  border: 1px solid #000;
+}/*# sourceMappingURL=base.css.map */
